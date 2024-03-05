@@ -11,6 +11,7 @@
 ## [Link to install FlareSolverr](https://github.com/FlareSolverr/FlareSolverr)
 
 ## Downloaing clients
+⚠️⚠️⚠️ Make sure you have a vpn on the server that has qbittorrent otherwise you might get contacted with DMCA regarding copyright infringement⚠️⚠️
 - I use qbittorrent but you can use anything look at [photo](arrAppSetup.md#setup-download-clients)
 - qbittorrent has headless webgui package called qbittorrent-nox
 ``` bash
