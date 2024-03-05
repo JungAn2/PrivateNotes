@@ -23,6 +23,6 @@
 - Click on the + sign
 ![](images/prowlarr5.png)
 - You will need api key for this to work. Go to settings and general inside the apps to get the api
-- [Installation](arrAppSetup.md#How-to-get-api)
+- [Get API instruction](arrAppSetup.md##How-to-get-api)
 ![](images/prowlarr6.png)
 
