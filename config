@@ -1,0 +1,184 @@
+Host *
+	AddKeysToAgent yes
+	IdentityFile ~/.ssh/hslinux
+
+Host debian
+	Hostname 10.249.46.61
+	User jung
+	Port 22
+	# password = password1
+	# root password = lxcdebian
+
+Host acadweb
+	Hostname acadweb4
+	User jan
+	Port 22
+
+Host proxmox
+	AddKeysToAgent yes
+        IdentityFile ~/.ssh/id_rsa_proxmox
+	Hostname 10.249.43.42
+	Port 22
+	User root
+	LocalForward 9000 10.249.43.42:8006
+	LocalForward 9001 10.249.43.63:443
+
+Host pforeman
+	AddKeysToAgent yes
+	IdentityFile ~/.ssh/id_rsa_proxmox
+	Hostname 10.249.43.63
+	Port 22
+	User root
+	LocalForward 9001 10.249.43.63:443
+
+Host github.com
+	User git
+	AddKeysToAgent yes
+	UseKeychain yes
+	IdentityFile ~/.ssh/id_ed25519_github
+
+Host proxy
+	Hostname 10.251.12.102
+	User root
+	Port 22
+
+Host HS101C
+	Hostname 10.249.43.40
+	User root
+	Port 22
+
+Host RedirectServer
+	ProxyJump HS101C
+        Hostname 10.251.12.125
+        Port 22
+        User root
+        #Proxmox
+        LocalForward 10000 10.251.12.125:8006
+        #Truenas
+        LocalForward 10001 10.251.12.121:443
+        #Ldap
+        LocalForward 10002 10.251.12.120:443
+        #Foreman
+        LocalForward 10003 10.251.12.119:443
+        #Docker
+        LocalForward 9443 10.251.12.108:9443
+        #Wiki
+        LocalForward 10004 10.251.12.78:80
+        #database student
+        LocalForward 10005 10.251.12.77:80
+        #database phpmyadmin
+        LocalForward 10006 10.251.12.77:8080
+
+
+
+Host server
+	Hostname 10.251.12.125
+	Port 22
+	User root
+	#Proxmox
+	LocalForward 10000 10.251.12.125:8006 
+	#Truenas	
+	LocalForward 10001 10.251.12.121:443  
+	#Ldap
+	LocalForward 10002 10.251.12.120:443 
+	#Foreman
+	LocalForward 10003 10.251.12.119:443
+	#Docker
+	LocalForward 9443 10.251.12.108:9443   
+	#Wiki
+	LocalForward 10004 10.251.12.78:80 
+	#database student
+	LocalForward 10005 10.251.12.77:80
+	#database phpmyadmin
+	LocalForward 10006 10.251.12.77:8080
+
+Host linode
+	Hostname 172.104.217.91
+	Port 22
+	User root
+	IdentityFile ~/.ssh/linode
+
+Host hpcl4-2
+	Hostname 10.249.43.121
+	Port 22
+	User root
+
+Host hpcl1-1
+	Hostname 10.249.43.75
+	Port 22
+	User root
+
+Host hpcl2-3
+	Hostname 10.249.43.53
+	Port 22
+	User root
+
+Host hpcl2-5
+	Hostname 10.249.43.86
+	Port 22
+	User root
+
+Host hpcl5-1
+	Hostname 10.249.43.95
+	Port 22
+	User root
+
+Host hpcl1-2
+	Hostname 10.249.43.52
+	Port 22
+	User root
+
+Host hpcl1-5
+	Hostname 10.249.43.64
+	Port 22
+	User root
+
+Host hpcl1-6
+	Hostname 10.249.43.113
+	Port 22
+	User root
+
+Host hpcl2-6
+	Hostname 10.249.43.81
+	Port 22
+	User root
+
+Host umbc
+	Hostname taki.rs.umbc.edu
+	Port 22
+	User jan10
+
+Host te111-01
+	Hostname 10.249.46.113
+	Port 22
+	User root
+
+Host te111-02
+	Hostname 10.249.46.97
+	Port 22
+	User root
+
+Host te111-03
+	Hostname 10.249.46.96
+	Port 22
+	User root
+
+Host te111-04
+	Hostname 10.249.46.95
+	Port 22
+	User root
+
+Host te117-01
+	Hostname 10.249.46.90
+	Port 22
+	User root
+
+Host te117-02
+	Hostname 10.249.46.89
+	Port 22
+	User root
+
+Host te117-03
+	Hostname 10.249.46.88
+	Port 22
+	User root
